@@ -1,0 +1,114 @@
+.jumbotron {
+  padding-top: 7rem;
+  background-color: #e2edff;
+}
+
+#projects {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}
+
+/* My Keyboard Section */
+.keyboard-box {
+  position: relative;
+  background-color: #1a75fd;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.keyboard-box::before {
+  content: "MY";
+  position: absolute;
+  color: white;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.keyboard-box:hover::before {
+  opacity: 0.5;
+}
+
+.keyboard-box::after {
+  content: "KEYBOARD";
+  position: absolute;
+  color: white;
+  font-size: 4.2em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.keyboard-box:hover::after {
+  opacity: 0.5;
+}
+
+.keyboard-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+/* saat keyboard box di hover maka keyboard namenya akan  
+penjelasan untuk psedou-class di bawah dan teman temannya yang serupa*/
+.keyboard-box:hover .keyboard-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.keyboard-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  transition: 0.5s;
+  opacity: 0;
+}
+/* transition selalu kasih di keadaan awal */
+
+.keyboard-box:hover .keyboard-detail-button {
+  bottom: 30px;
+  opacity: 1;
+}
+
+/* cara bikin elemen di tengan dalam kontent(parent), left & topnya 50% atau bisa salah satunya kalau gk perlu, trus kasih transform(translate(-50%,-50%) bisa di isi salah satunya kalau gk perlu  */
+
+.keyboard-img {
+  max-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 80px);
+  transition: 0.5s;
+}
+
+.keyboard-box:hover .keyboard-img {
+  transform: translate3d(-50%, -50%, 80px) scale(1.2) rotate(-10deg);
+}
